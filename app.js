@@ -3,15 +3,10 @@ import cors from 'cors';
 import config from 'config';
 import mongoose from 'mongoose';
 import fileUpload from 'express-fileupload';
-// import studentsRoutes from './routes/students.routes.js';
 import Student from './models/Student.js';
 import bp from 'body-parser';
 
-// const studentsRoutes = require('./routes/students.routes.js');
-
 const app = express();
-
-// app.use('/api', studentsRoutes);
 
 app.use(fileUpload({
   createParentPath: true
