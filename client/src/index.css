@@ -1,0 +1,363 @@
+/* @import  url('./fonts/geometria/stylesheet.css'); */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* font-family: Geometria; */
+  font-size: 16px;
+  line-height: 20px;
+}
+header {
+  height: 86px;
+  display: flex;
+  padding-left: 9%;
+  align-items: center;
+  margin-bottom: 25px;
+  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+}
+.logo-circle {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 4px solid #49C2E8;
+}
+.logo-circle::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 4px solid #49C2E8;
+}
+header span {
+  margin-left:45px;
+}
+header strong {
+  color: #49C2E8;
+}
+
+.container {
+  width: 82%;
+  max-width: 1180;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th {
+  font-size: 1em;
+  font-weight: normal;
+  text-align: left;
+}
+table tbody {
+  background: #FFFFFF;
+  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;  
+}
+table th, td {
+  padding: 1em 1.18em;
+}
+table th:nth-child(1) {
+  width: 5%;
+}
+table th:nth-child(2) {
+  width: 30%;
+}
+table th:nth-child(3) {
+  width: 30%;
+}
+table th:nth-child(4) {
+  width: 13%;
+}
+table th:nth-child(5) {
+  width: 13%;
+}
+table th:nth-child(6) {
+  width: 2.5%;
+}
+table th:nth-child(7) {
+  width: 2.5%;
+}
+.students td:first-child {
+  max-width: 80px;
+}
+
+.students img.ava{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: inset 2px rgba(0, 0, 0, 0.6);
+}
+
+.students .color {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* background-color: #83C872; */
+  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+}
+
+.add-student {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: flex-start;
+  max-width: 860px;
+  max-height: 550px;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  max-width: 380px;
+  width: 100%;
+}
+input, select{
+  margin-top: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border:none;
+  border-radius: 6px;
+  padding: 16px 20px;
+  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.08);
+}
+
+.back {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  color: #000;
+}
+.in-valid {
+  color: red;
+}
+.btn {
+  margin-top: 0.5em;
+  background: #49C2E8;
+  color: #FFFFFF;
+  max-width: 380px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 1em 1.25em;
+  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+}
+.btn.btn-create{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+	
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+.custom-select-caret {
+  position: absolute;
+  top:40%;
+  right: 20px;
+}
+.custom-select .option-box {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #DBE2EA;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04), 0px 20px 20px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+  max-height: 200px;
+  overflow: scroll;
+}
+.custom-select .option {
+  position: relative;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 5px;
+  vertical-align: middle;
+  transition: background 0.3s linear;
+}
+.custom-select .option:hover {
+  background: #49C2E81C;
+}
+.custom-select .option:hover > .option-marker {
+  color: #49C2E8;
+}
+.option-marker {
+  position: absolute;
+  right: 10px;
+  color: transparent;
+  font-size: 0.8em;
+  transition: color 0.1s linear;
+}
+
+.option-box-color {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-height: 50px;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #DBE2EA;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04), 0px 20px 20px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+  overflow: scroll;
+  z-index: 1;
+}
+.option-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.blue {
+  background: #49C2E8;
+}
+.red {
+  background: #E25B5B;
+}
+.green {
+  background: #83C872;
+}
+.yellow {
+  background: #F7FB53;
+}
+.black {
+  background: #000;
+}
+.orange {
+  background: #EFA638;
+}
+.lgbt {
+  background-image: linear-gradient(to bottom,
+   red, red,
+   orange, orange,
+   yellow, yellow,
+   green, green,
+   blue, blue,
+   indigo, indigo
+ );
+}
+
+.input-ava {
+  display: flex;
+  margin-top: 0zz.8em;
+  margin-bottom: 1.8em;
+}
+.input-ava-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.input-ava-control label {
+  text-decoration: underline;
+  font-size: 1em;
+  line-height: 20px;
+}
+.input-ava-control span {
+  font-size: 0.75em;
+  margin-top: 0.5em;
+}
+.input-ava img {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+  color: transparent;
+  text-align: center;
+  font-size: 1.75em;
+}
+.input-ava img::after {
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  content: "ФП";
+  color:#49C2E8;
+}
+.input-ava input {
+  display: none;
+}
+.search-panel {
+  margin-top: 67px;
+  margin-bottom: 36px;
+}
+.search-panel > div {
+  display: flex;
+  justify-content: space-between;
+}
+.search-panel > div:first-child {
+  margin-bottom: 40px;
+}
+.input-wrapper {
+  height: max-content;
+  position: relative;
+}
+.input-wrapper.left {
+  width: 82%;
+}
+.input-wrapper.left svg {
+  position: absolute;
+  top: calc(50% - 0.25em);
+  left: 20px;
+}
+.input-wrapper.right svg {
+  position: absolute;
+  top: calc(50% - 0.25em);
+  right: 15px;
+}
+.input-wrapper .custom-select-caret {
+  display: none;
+}
+.input-wrapper.left input {
+  padding-left: 55px;
+}
+.input-wrapper.right {
+  width: 15%;
+}
+input[name="search"] {
+  
+
+}
+input[name="sort"] {
+
+}
+
+@media (max-width: 361px) {
+  .add-student {
+    flex-wrap: nowrap;
+    max-height: auto;
+  }
+}
+@media (max-width: 1048px) and (min-width: 360px) {
+  .add-student {
+    flex-wrap: nowrap;
+    max-height: none;
+  }
+}
+
+
